@@ -23,7 +23,9 @@ Pod::Spec.new do |s|
   s.source_files = "MTSPhotoAlbum/"
   s.resources = "MTSPhotoAlbum/KMTSNPhotoAlbum.bundle"
   s.framework  = "UIKit","Photos"
-  s.swift_version = '4.0'
+  s.swift_version = '4.1'
   s.dependency "TSUtility"
   s.dependency "SnapKit"
+  s.requires_arc = true
+
 end

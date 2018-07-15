@@ -49,5 +49,6 @@ PS: 自定义图片需存放至自定义 imgBundle中
 
 1. Build Settings中 修改 Defines Module 设置为YES
 2. 在需要使用的类中输入 #import "[ProductName]-Swift.h"
+3. Podfile顶部需设置 use_frameworks!
 重新编译即可
 ```

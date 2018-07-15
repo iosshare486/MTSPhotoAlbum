@@ -8,8 +8,7 @@
 
 import UIKit
 import Photos
-
-
+import SnapKit
 
 protocol MTSPhotoBrowserCollectionCellDelegate {
     

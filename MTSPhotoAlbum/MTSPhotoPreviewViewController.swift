@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import SnapKit
 
 enum MTSPhotoPreviewMType {
     case image, camera

@@ -9,6 +9,7 @@
 import UIKit
 import TSUtility
 import Photos
+import SnapKit
 
 protocol MTSPhotoBrowserViewControllerDelegate {
     func updateImgSelectIndexs(_ indexs: [Int])

@@ -31,7 +31,7 @@ class MTSPhotoLibraryViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.isTranslucent = false
         
         photoTableView.delegate = self
         photoTableView.dataSource = self

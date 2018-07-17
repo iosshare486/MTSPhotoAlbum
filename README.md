@@ -3,6 +3,17 @@
 
 ## Usage
 
+### Info.plist配置
+```
+	<key>NSCameraUsageDescription</key>
+	<string>需要相机权限</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要照片权限</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>需要访问媒体资料库</string>
+```
+
+
 ### 常规使用
 
 ```

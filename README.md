@@ -1,9 +1,27 @@
-# MTSPhotoAlbum
+##  MTSPhotoAlbum
 #### 系统相册支持多选
 
-## Usage
+## Quote
 
-### Info.plist配置
+#### For Swift
+```
+Podfile文件 >>
+source 'http://gitlab.caiqr.com/zhangjunjie/ExchangePodSpecs.git'
+pod 'MTSPhotoAlbum'
+```
+#### For Objective-C
+```
+Build Settings中 修改 Defines Module 设置为YES
+Podfile文件 >>
+use_frameworks!
+source 'http://gitlab.caiqr.com/zhangjunjie/ExchangePodSpecs.git'
+pod 'MTSPhotoAlbum'
+
+在需要使用的类中输入 #import <MTSPhotoAlbum/MTSPhotoAlbum-Swift.h>
+重新编译即可
+```
+## Configure
+#### Info.plist配置
 ```
 	<key>NSCameraUsageDescription</key>
 	<string>需要相机权限</string>
@@ -13,8 +31,8 @@
 	<string>需要访问媒体资料库</string>
 ```
 
-
-### 常规使用
+## Usage
+#### 常规使用
 
 ```
 /**
@@ -35,7 +53,7 @@ MTSPhotoAlbum.default.supportCamera = true
 
 ```
 
-### 支持自定义UI
+#### 支持自定义UI
 
 ```
 // 自定义图片资源Bundle
@@ -55,11 +73,3 @@ PS: 自定义图片需存放至自定义 imgBundle中
 
 ```
 
-## For Objective-C
-```
-
-1. Build Settings中 修改 Defines Module 设置为YES
-2. 在需要使用的类中输入 #import <MTSPhotoAlbum/MTSPhotoAlbum-Swift.h>
-3. Podfile顶部需设置 use_frameworks!
-重新编译即可
-```

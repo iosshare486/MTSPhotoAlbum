@@ -1,0 +1,21 @@
+PODS:
+  - SnapKit (4.0.0)
+  - TSUtility (1.0.3)
+
+DEPENDENCIES:
+  - SnapKit
+  - TSUtility
+
+SPEC REPOS:
+  http://gitlab.caiqr.com/zhangjunjie/ExchangePodSpecs.git:
+    - TSUtility
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
+
+SPEC CHECKSUMS:
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  TSUtility: e4227ac9d5d2f6f6a629eead65dc628883ced2d0
+
+PODFILE CHECKSUM: 3b3cdb7f119fc74c34c2bb286b02c7db10ec520a
+
+COCOAPODS: 1.5.3

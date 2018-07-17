@@ -21,6 +21,7 @@
 		3B0F8A1520FB2A8400C695DC /* MTSPhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8A0F20FB2A8400C695DC /* MTSPhotoLibraryViewController.swift */; };
 		3B0F8A1620FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8A1020FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift */; };
 		3B0F8A1820FB30B500C695DC /* KMTSNPhotoAlbum.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F8A1720FB30B500C695DC /* KMTSNPhotoAlbum.bundle */; };
+		BD0CA400EEC694841DCFF1AF /* libPods-MTSPhotoLibraryAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C85BA16E0A11414FB059F86 /* libPods-MTSPhotoLibraryAlbum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17965427940736086342FBA6 /* Pods-MTSPhotoLibraryAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTSPhotoLibraryAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTSPhotoLibraryAlbum/Pods-MTSPhotoLibraryAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0F89D920FB2A5300C695DC /* MTSPhotoLibraryAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTSPhotoLibraryAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0F89DC20FB2A5300C695DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B0F89DE20FB2A5300C695DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		3B0F8A0F20FB2A8400C695DC /* MTSPhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSPhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		3B0F8A1020FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSPhotoLibraryAuthorizeView.swift; sourceTree = "<group>"; };
 		3B0F8A1720FB30B500C695DC /* KMTSNPhotoAlbum.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KMTSNPhotoAlbum.bundle; sourceTree = "<group>"; };
+		8C85BA16E0A11414FB059F86 /* libPods-MTSPhotoLibraryAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTSPhotoLibraryAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1DB4893F758BB74EB89F80 /* Pods-MTSPhotoLibraryAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTSPhotoLibraryAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTSPhotoLibraryAlbum/Pods-MTSPhotoLibraryAlbum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0CA400EEC694841DCFF1AF /* libPods-MTSPhotoLibraryAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,8 @@
 				3B0F89F020FB2A5600C695DC /* MTSPhotoLibraryAlbumTests */,
 				3B0F89FB20FB2A5600C695DC /* MTSPhotoLibraryAlbumUITests */,
 				3B0F89DA20FB2A5300C695DC /* Products */,
+				70208AD6FDDBFFBA9D967A4B /* Pods */,
+				F73BF79ED32C1C13C12E55A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +161,23 @@
 			path = MTSPhotoAlbum;
 			sourceTree = SOURCE_ROOT;
 		};
+		70208AD6FDDBFFBA9D967A4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17965427940736086342FBA6 /* Pods-MTSPhotoLibraryAlbum.debug.xcconfig */,
+				FB1DB4893F758BB74EB89F80 /* Pods-MTSPhotoLibraryAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F73BF79ED32C1C13C12E55A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C85BA16E0A11414FB059F86 /* libPods-MTSPhotoLibraryAlbum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,6 +185,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0F8A0120FB2A5600C695DC /* Build configuration list for PBXNativeTarget "MTSPhotoLibraryAlbum" */;
 			buildPhases = (
+				D5B9044C10322E7347BD511F /* [CP] Check Pods Manifest.lock */,
 				3B0F89D520FB2A5300C695DC /* Sources */,
 				3B0F89D620FB2A5300C695DC /* Frameworks */,
 				3B0F89D720FB2A5300C695DC /* Resources */,
@@ -280,6 +305,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D5B9044C10322E7347BD511F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MTSPhotoLibraryAlbum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B0F89D520FB2A5300C695DC /* Sources */ = {
@@ -464,6 +510,7 @@
 		};
 		3B0F8A0220FB2A5600C695DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17965427940736086342FBA6 /* Pods-MTSPhotoLibraryAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +528,7 @@
 		};
 		3B0F8A0320FB2A5600C695DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1DB4893F758BB74EB89F80 /* Pods-MTSPhotoLibraryAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

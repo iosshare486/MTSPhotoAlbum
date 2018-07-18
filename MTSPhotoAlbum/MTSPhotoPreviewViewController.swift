@@ -62,7 +62,7 @@ class MTSPhotoPreviewViewController: UIViewController {
         
         imageManager = PHCachingImageManager()
         
-        cancelBtn.setTitle("取消", for: .normal)
+        cancelBtn.setTitle("MTSPhotoAlbum_cancel".MTSPhotoAlbumLocalizedString(), for: .normal)
         cancelBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15.ts.scale())
         cancelBtn.setTitleColor("0x6".ts.color(), for: .normal)
         cancelBtn.addTarget(self, action: #selector(closePhotolibrary), for: .touchUpInside)
@@ -406,7 +406,15 @@ extension MTSPhotoPreviewViewController: MTSPhotoBrowserViewControllerDelegate {
             selectedIndexs.append(contentsOf: indexs)
         }
         
-        photoCollectionView.reloadData()
+        let cellIndexPaths = photoCollectionView.visibleCells.map { (cell) -> IndexPath in
+            if let idx = photoCollectionView.indexPath(for: cell) {
+                return idx
+            }
+            return IndexPath(row: 0, section: 0)
+        }
+        
+        photoCollectionView.reloadItems(at: cellIndexPaths)
+
     }
 }
 
@@ -453,7 +461,7 @@ class MTSPhotoPreviewToolBar: UIView {
         countLbl.textColor = "0xB".ts.color()
         countLbl.textAlignment = .left
         
-        doneBtn.setTitle("完成", for: .normal)
+        doneBtn.setTitle("MTSPhotoAlbum_done".MTSPhotoAlbumLocalizedString(), for: .normal)
         doneBtn.backgroundColor = .green
         
         
@@ -471,7 +479,7 @@ class MTSPhotoPreviewToolBar: UIView {
             make.top.equalTo(doneBtn)
             make.left.equalToSuperview().offset(10.ts.scale())
             make.height.equalTo(doneBtn)
-            make.width.equalTo(150.ts.scale())
+            make.width.equalTo(200.ts.scale())
         }
         
     }
@@ -485,9 +493,9 @@ class MTSPhotoPreviewToolBar: UIView {
         
         if hasImg {
             let countStr = String(format: "%i", count)
-            countLbl.text = "已选择: " + countStr
+            countLbl.text = "MTSPhotoAlbum_selected".MTSPhotoAlbumLocalizedString() + ": " + countStr
         } else {
-            countLbl.text = "请选择图片"
+            countLbl.text = "MTSPhotoAlbum_selectPicMsg".MTSPhotoAlbumLocalizedString()
         }
         
         doneBtn.isEnabled = hasImg

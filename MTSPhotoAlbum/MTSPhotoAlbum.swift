@@ -12,14 +12,30 @@ import Photos
 extension Bundle {
     
     class func MTSPhotoAlbumBundle() -> Bundle? {
-        let defaultBundleName = "KMTSNPhotoAlbum"
+        
         if MTSPhotoAlbum.default.imgBundle != nil {
             return MTSPhotoAlbum.default.imgBundle!
         } else {
-            let path = Bundle(for: MTSPhotoLibraryViewController.self).path(forResource: defaultBundleName, ofType: "bundle")
-            return Bundle(path: path!)
+            return Bundle.getDefaultBundle()
         }
+    }
+    
+    
+    class func getDefaultBundle() -> Bundle? {
+        let defaultBundleName = "KMTSNPhotoAlbum"
+        if let path = Bundle(for: MTSPhotoLibraryViewController.self).path(forResource: defaultBundleName, ofType: "bundle") {
+            return Bundle(path: path)
+        }
+        return nil
+    }
+    
+}
+
+extension String {
+    
+    func MTSPhotoAlbumLocalizedString() -> String {
         
+         return NSLocalizedString(self, tableName: "MTSPhotoAlbumLocalize", bundle: Bundle(for: MTSPhotoLibraryViewController.self), value: "", comment: "")
     }
 }
 
@@ -41,7 +57,6 @@ public class MTSPhotoAlbum: NSObject {
     
     @objc open var imgCameraName: String = "photo_camera_icon"
     @objc open var doneButtonEnableColor = "0xfc5a5a".ts.color()
-    @objc open var photoAuthorizeDeniedMessage = "请在iPhone的“设置-隐私-照片”选项中,\n允许访问你的手机相册"
     
     /// 选择图片个数
     var imgLimitCount: Int = 1

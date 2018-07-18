@@ -1,0 +1,15 @@
+/* 
+  MTSPhotoAlbumLocalize.strings
+  MTSPhotoLibraryAlbum
+
+  Created by 彩球 on 2018/7/18.
+  Copyright © 2018年 caiqr. All rights reserved.
+*/
+"MTSPhotoAlbum_done" = "完成";
+"MTSPhotoAlbum_cancel" = "取消";
+"MTSPhotoAlbum_selectPicMsg" = "请选择图片";
+"MTSPhotoAlbum_selected" = "已选择";
+"MTSPhotoAlbum_PicLimitButtonTitle" = "我知道了";
+"MTSPhotoAlbum_PicLimitTitle" = "最多只能选择";
+"MTSPhotoAlbum_PicLimitTitleAddition" = "张图片";
+"MTSPhotoAlbum_photoAuthorize" = "请在iPhone的“设置-隐私-照片”选项中,\n允许访问你的手机相册";

@@ -27,7 +27,7 @@ class MTSPhotoLibraryAuthorizeView: UIView {
             make.top.equalToSuperview().offset(130.ts.scale())
         }
         
-        message.text = MTSPhotoAlbum.default.photoAuthorizeDeniedMessage
+        message.text = "MTSPhotoAlbum_photoAuthorize".MTSPhotoAlbumLocalizedString()
         
     }
     

@@ -46,7 +46,7 @@ class MTSPhotoLibraryViewController: UIViewController, UITableViewDelegate, UITa
             make.edges.equalToSuperview()
         }
 
-        cancelBtn.setTitle("取消", for: .normal)
+        cancelBtn.setTitle("MTSPhotoAlbum_cancel".MTSPhotoAlbumLocalizedString(), for: .normal)
         cancelBtn.titleLabel?.font = UIFont.systemFont(ofSize: 15.ts.scale())
         cancelBtn.setTitleColor("0x6".ts.color(), for: .normal)
         cancelBtn.addTarget(self, action: #selector(closePhotolibrary), for: .touchUpInside)

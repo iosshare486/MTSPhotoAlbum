@@ -21,6 +21,7 @@
 		3B0F8A1520FB2A8400C695DC /* MTSPhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8A0F20FB2A8400C695DC /* MTSPhotoLibraryViewController.swift */; };
 		3B0F8A1620FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F8A1020FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift */; };
 		3B0F8A1820FB30B500C695DC /* KMTSNPhotoAlbum.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B0F8A1720FB30B500C695DC /* KMTSNPhotoAlbum.bundle */; };
+		3BE5785720FF2468001422B8 /* MTSPhotoAlbumLocalize.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5785920FF2468001422B8 /* MTSPhotoAlbumLocalize.strings */; };
 		BD0CA400EEC694841DCFF1AF /* libPods-MTSPhotoLibraryAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C85BA16E0A11414FB059F86 /* libPods-MTSPhotoLibraryAlbum.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,8 @@
 		3B0F8A0F20FB2A8400C695DC /* MTSPhotoLibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSPhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		3B0F8A1020FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSPhotoLibraryAuthorizeView.swift; sourceTree = "<group>"; };
 		3B0F8A1720FB30B500C695DC /* KMTSNPhotoAlbum.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KMTSNPhotoAlbum.bundle; sourceTree = "<group>"; };
+		3BE5785820FF2468001422B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MTSPhotoAlbumLocalize.strings; sourceTree = "<group>"; };
+		3BE5785A20FF246A001422B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MTSPhotoAlbumLocalize.strings"; sourceTree = "<group>"; };
 		8C85BA16E0A11414FB059F86 /* libPods-MTSPhotoLibraryAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTSPhotoLibraryAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1DB4893F758BB74EB89F80 /* Pods-MTSPhotoLibraryAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTSPhotoLibraryAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTSPhotoLibraryAlbum/Pods-MTSPhotoLibraryAlbum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +159,7 @@
 				3B0F8A0E20FB2A8400C695DC /* MTSPhotoPreviewViewController.swift */,
 				3B0F8A0F20FB2A8400C695DC /* MTSPhotoLibraryViewController.swift */,
 				3B0F8A1020FB2A8400C695DC /* MTSPhotoLibraryAuthorizeView.swift */,
+				3BE5785920FF2468001422B8 /* MTSPhotoAlbumLocalize.strings */,
 				3B0F8A1720FB30B500C695DC /* KMTSNPhotoAlbum.bundle */,
 			);
 			path = MTSPhotoAlbum;
@@ -265,6 +269,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 3B0F89D020FB2A5300C695DC;
 			productRefGroup = 3B0F89DA20FB2A5300C695DC /* Products */;
@@ -285,6 +290,7 @@
 			files = (
 				3B0F89E720FB2A5600C695DC /* LaunchScreen.storyboard in Resources */,
 				3B0F89E420FB2A5600C695DC /* Assets.xcassets in Resources */,
+				3BE5785720FF2468001422B8 /* MTSPhotoAlbumLocalize.strings in Resources */,
 				3B0F8A1820FB30B500C695DC /* KMTSNPhotoAlbum.bundle in Resources */,
 				3B0F89E220FB2A5300C695DC /* Main.storyboard in Resources */,
 			);
@@ -391,6 +397,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		3BE5785920FF2468001422B8 /* MTSPhotoAlbumLocalize.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE5785820FF2468001422B8 /* en */,
+				3BE5785A20FF246A001422B8 /* zh-Hans */,
+			);
+			name = MTSPhotoAlbumLocalize.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -398,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -458,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

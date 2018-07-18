@@ -152,7 +152,7 @@ class MTSPhotoBrowserViewController: UIViewController {
     // MARK: - Navigation Bar
     
     func navigationBarGobackAction() {
-        
+        delegate?.updateImgSelectIndexs(selectedImageIndexs)
         dismiss(animated: true, completion: nil)
     }
     
@@ -166,6 +166,12 @@ class MTSPhotoBrowserViewController: UIViewController {
         } else {
             if selectedImageIndexs.count == MTSPhotoAlbum.default.imgLimitCount {
                 //Error
+                let alert = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                let numStr = String(format: "%i", MTSPhotoAlbum.default.imgLimitCount)
+                let msg = "MTSPhotoAlbum_PicLimitTitle".MTSPhotoAlbumLocalizedString() + numStr + "MTSPhotoAlbum_PicLimitTitleAddition".MTSPhotoAlbumLocalizedString()
+                let alertVC = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+                alertVC.addAction(alert)
+                present(alertVC, animated: true, completion: nil)
                 return
             } else {
                 selectedImageIndexs.append(currentImageIndex)
@@ -403,7 +409,7 @@ class MTSPhotoBrowserToolBar: UIView {
         doneBtn.layer.cornerRadius = 4.ts.scale()
         doneBtn.addTarget(self, action: #selector(doneClicked), for: .touchUpInside)
         
-        doneBtn.setTitle("完成", for: .normal)
+        doneBtn.setTitle("MTSPhotoAlbum_done".MTSPhotoAlbumLocalizedString(), for: .normal)
         doneBtn.backgroundColor = .lightGray
         
         

@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MTSPhotoAlbum"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "MTSPhotoAlbum"
   s.description  = <<-DESC
             photo album for select
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
  
   s.ios.deployment_target = '9.0'
   s.source       = { :git => "http://gitlab.caiqr.com/ios_module/MTSPhotoAlbum.git", :tag => "#{s.version.to_s}" }
-  s.source_files = "MTSPhotoAlbum/"
+  s.source_files = "MTSPhotoAlbum/**/*"
   s.resources = "MTSPhotoAlbum/KMTSNPhotoAlbum.bundle"
   s.framework  = "UIKit","Photos"
   s.swift_version = '4.1'

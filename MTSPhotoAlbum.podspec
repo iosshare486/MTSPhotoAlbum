@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.framework  = "UIKit","Photos"
   s.swift_version = '4.1'
   s.dependency "TSUtility"
-  s.dependency "SnapKit"
+  s.dependency "SnapKit", "~> 4.0.0"
   s.requires_arc = true
 
 end

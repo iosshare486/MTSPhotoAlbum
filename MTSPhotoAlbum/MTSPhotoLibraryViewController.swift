@@ -37,8 +37,8 @@ class MTSPhotoLibraryViewController: UIViewController, UITableViewDelegate, UITa
         photoTableView.dataSource = self
         photoTableView.separatorStyle = .none
         
-        photoTableView.rowHeight = UITableViewAutomaticDimension
-        photoTableView.estimatedRowHeight = UITableViewAutomaticDimension
+        photoTableView.rowHeight = UITableView.automaticDimension
+        photoTableView.estimatedRowHeight = UITableView.automaticDimension
         
         view.addSubview(photoTableView)
         
@@ -135,7 +135,7 @@ class MTSPhotoLibraryCell: UITableViewCell {
     var imgV = UIImageView()
     var photoTitleLbl = UILabel()
     var line = UIView()
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         accessoryType = .disclosureIndicator
         

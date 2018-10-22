@@ -188,8 +188,8 @@ class MTSPhotoPreviewViewController: UIViewController {
     
     /// 调用照相机
     private func openCamera() {
-        let sourceType = UIImagePickerControllerSourceType.camera
-        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera){
+        let sourceType = UIImagePickerController.SourceType.camera
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
             return
 //            sourceType = UIImagePickerControllerSourceType.photoLibrary
         }
@@ -425,9 +425,9 @@ extension MTSPhotoPreviewViewController: UIImagePickerControllerDelegate, UINavi
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
             MTSPhotoAlbum.default.electedImgs?([image])
         }
         

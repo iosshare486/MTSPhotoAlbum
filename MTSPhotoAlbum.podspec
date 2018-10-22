@@ -8,7 +8,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "MTSPhotoAlbum"
-  s.version      = "0.0.5"
+  s.version      = "2.0.0"
   s.summary      = "MTSPhotoAlbum"
   s.description  = <<-DESC
             photo album for select
@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
   s.source_files = "MTSPhotoAlbum/**/*"
   s.resources = "MTSPhotoAlbum/KMTSNPhotoAlbum.bundle"
   s.framework  = "UIKit","Photos"
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
   s.dependency "TSUtility"
-  s.dependency "SnapKit", "~> 4.0.0"
+  s.dependency "SnapKit"
   s.requires_arc = true
 
 end
